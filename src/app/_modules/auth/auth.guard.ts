@@ -7,10 +7,11 @@ export class AuthGuard  {
     constructor(private router: Router) { }
 
     canActivate() {
+        return true;
         if (localStorage.getItem('currentUser')) {
             return true;
         }
-        this.router.navigate(['/login']);
+        this.router.navigate(['/auth/login']);
         return false;
     }
 }

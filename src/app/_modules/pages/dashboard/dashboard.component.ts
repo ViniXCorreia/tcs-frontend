@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { Product } from '../../demo/api/product';
-import { ProductService } from '../../demo/service/product.service';
+import { Product } from '../../../demo/api/product';
+import { ProductService } from '../../../demo/service/product.service';
 import { Subscription } from 'rxjs';
-import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { LayoutService } from '../layout/service/app.layout.service';
 
 @Component({
     templateUrl: './dashboard.component.html',
