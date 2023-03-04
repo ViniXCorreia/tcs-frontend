@@ -3,15 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { ServiceRoutingModule } from './service-routing.module';
 import { ServiceComponent } from './service.component';
+import { TableModule } from 'primeng/table';
+import { ServiceListComponent } from './list/service-list.component';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 
 @NgModule({
   declarations: [
-    ServiceComponent
+    ServiceComponent,ServiceListComponent
   ],
   imports: [
     CommonModule,
-    ServiceRoutingModule
+    ServiceRoutingModule,
+    TableModule,
+    MultiSelectModule
   ]
 })
 export class ServiceModule { }

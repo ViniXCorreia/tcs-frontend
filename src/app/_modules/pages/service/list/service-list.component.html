@@ -1,1 +1,41 @@
-teste
+<p-table [value]="services" [lazy]="true" (onLazyLoad)="loadServices($event)" dataKey="id"
+    [tableStyle]="{'min-width': '75rem'}" [paginator]="true" [rows]="10" [totalRecords]="totalRecords"
+    [loading]="loading" [globalFilterFields]="['name','country.name', 'company', 'representative.name']">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 4rem"></th>
+            <th pSortableColumn="id">Código <p-sortIcon field="id"></p-sortIcon></th>
+            <th pSortableColumn="description">Descrição<p-sortIcon field="description"></p-sortIcon></th>
+            <th pSortableColumn="totalCost">Preço <p-sortIcon field="totalCost"></p-sortIcon></th>
+            <th pSortableColumn="duration">Duração <p-sortIcon field="duration"></p-sortIcon></th>
+        
+        </tr>
+        <tr>
+            <th style="width: 4rem">
+             
+            </th>
+            <th>
+                <p-columnFilter type="text" field="id"></p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter type="text" field="description"></p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter type="text" field="totalCost"></p-columnFilter>
+            </th>
+            <th>
+                <p-columnFilter type="text" field="duration"></p-columnFilter>
+            </th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-service>
+        <tr>
+       
+            <td>{{service.id}}</td>
+            <td>{{service.description}}</td>
+            <td>{{service.totalCost}}</td>
+            <td>{{service.duration}}</td>
+        </tr>
+    </ng-template>
+</p-table>
