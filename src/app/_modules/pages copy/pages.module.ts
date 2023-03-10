@@ -4,7 +4,6 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.components';
 import { AppLayoutModule } from './layout/app.layout.module';
 import { ServiceModule } from './service/service.module';
-import { ScheduleModule } from './schedule/schedule.module';
 
 @NgModule({
     declarations: [PagesComponent],
@@ -12,8 +11,7 @@ import { ScheduleModule } from './schedule/schedule.module';
         CommonModule,
         PagesRoutingModule,
         AppLayoutModule,
-        ServiceModule,
-        ScheduleModule
+        ServiceModule
    ],
 
 })

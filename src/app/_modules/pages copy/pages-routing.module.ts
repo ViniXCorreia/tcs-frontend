@@ -13,8 +13,7 @@ import { PagesComponent } from './pages.components';
             children: [{ path: 'crud', loadChildren: () => import('./crud/crud.module').then(m => m.CrudModule) },
             { path: 'service', loadChildren: () => import('./service/service.module').then(m => m.ServiceModule) },
             { path: 'timeline', loadChildren: () => import('./timeline/timelinedemo.module').then(m => m.TimelineDemoModule) },
-            { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
-            { path: 'schedule', loadChildren: () => import('./schedule/schedule.module').then(m => m.ScheduleModule) },]
+            { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },]
         }
     ])],
     exports: [RouterModule]
